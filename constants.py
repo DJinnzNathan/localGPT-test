@@ -58,7 +58,7 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-xl" # Uses 5 GB of VRAM (Most Accurate
 
 
 #### SELECT AN OPEN SOURCE LLM (LARGE LANGUAGE MODEL)
-    # Select the Model ID and model_basename
+    # Select the Model ID and MODEL_BASENAME
     # load the LLM for generating Natural Language responses
 
 #### GPU VRAM Memory required for LLM Models (ONLY) by Billion Parameter value (B Model)
@@ -83,7 +83,7 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-xl" # Uses 5 GB of VRAM (Most Accurate
 # MODEL_ID = "TheBloke/guanaco-7B-HF"
 # MODEL_ID = 'NousResearch/Nous-Hermes-13b' # Requires ~ 23GB VRAM. Using STransformers
 # alongside will 100% create OOM on 24GB cards.
-# llm = load_model(device_type, model_id=model_id)
+# llm = load_model(device_type, MODEL_ID=MODEL_ID)
 
 ####
 #### (FOR GPTQ QUANTIZED) Select a llm model based on your GPU and VRAM GB. Does not include Embedding Models VRAM usage.
@@ -92,43 +92,43 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-xl" # Uses 5 GB of VRAM (Most Accurate
 ##### 48GB VRAM Graphics Cards (RTX 6000, RTX A6000 and other 48GB VRAM GPUs) #####
 
 ### 65b GPTQ LLM Models for 48GB GPUs (*** With best embedding model: hkunlp/instructor-xl ***)
-# model_id = "TheBloke/guanaco-65B-GPTQ"
-# model_basename = "model.safetensors"
-# model_id = "TheBloke/Airoboros-65B-GPT4-2.0-GPTQ"
-# model_basename = "model.safetensors"
-# model_id = "TheBloke/gpt4-alpaca-lora_mlp-65B-GPTQ"
-# model_basename = "model.safetensors"
-# model_id = "TheBloke/Upstage-Llama1-65B-Instruct-GPTQ" 
-# model_basename = "model.safetensors"    
+# MODEL_ID = "TheBloke/guanaco-65B-GPTQ"
+# MODEL_BASENAME = "model.safetensors"
+# MODEL_ID = "TheBloke/Airoboros-65B-GPT4-2.0-GPTQ"
+# MODEL_BASENAME = "model.safetensors"
+# MODEL_ID = "TheBloke/gpt4-alpaca-lora_mlp-65B-GPTQ"
+# MODEL_BASENAME = "model.safetensors"
+# MODEL_ID = "TheBloke/Upstage-Llama1-65B-Instruct-GPTQ" 
+# MODEL_BASENAME = "model.safetensors"    
 
 ##### 24GB VRAM Graphics Cards (RTX 3090 - RTX 4090 (35% Faster) - RTX A5000 - RTX A5500) #####
 
 ### 13b GPTQ Models for 24GB GPUs (*** With best embedding model: hkunlp/instructor-xl ***)
- model_id = "TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ"
-# model_basename = "Wizard-Vicuna-13B-Uncensored-GPTQ-4bit-128g.compat.no-act-order.safetensors"
-# model_id = "TheBloke/vicuna-13B-v1.5-GPTQ"
- model_basename = "model.safetensors"
-# model_id = "TheBloke/Nous-Hermes-13B-GPTQ"
-# model_basename = "nous-hermes-13b-GPTQ-4bit-128g.no-act.order"
-# model_id = "TheBloke/WizardLM-13B-V1.2-GPTQ" 
-# model_basename = "gptq_model-4bit-128g.safetensors
+ MODEL_ID = "TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ"
+# MODEL_BASENAME = "Wizard-Vicuna-13B-Uncensored-GPTQ-4bit-128g.compat.no-act-order.safetensors"
+# MODEL_ID = "TheBloke/vicuna-13B-v1.5-GPTQ"
+ MODEL_BASENAME = "model.safetensors"
+# MODEL_ID = "TheBloke/Nous-Hermes-13B-GPTQ"
+# MODEL_BASENAME = "nous-hermes-13b-GPTQ-4bit-128g.no-act.order"
+# MODEL_ID = "TheBloke/WizardLM-13B-V1.2-GPTQ" 
+# MODEL_BASENAME = "gptq_model-4bit-128g.safetensors
 
 ### 30b GPTQ Models for 24GB GPUs (*** Requires using intfloat/e5-base-v2 instead of hkunlp/instructor-large as embedding model ***)
-# model_id = "TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ"
-# model_basename = "Wizard-Vicuna-30B-Uncensored-GPTQ-4bit--1g.act.order.safetensors" 
-# model_id = "TheBloke/WizardLM-30B-Uncensored-GPTQ"
-# model_basename = "WizardLM-30B-Uncensored-GPTQ-4bit.act-order.safetensors" 
+# MODEL_ID = "TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ"
+# MODEL_BASENAME = "Wizard-Vicuna-30B-Uncensored-GPTQ-4bit--1g.act.order.safetensors" 
+# MODEL_ID = "TheBloke/WizardLM-30B-Uncensored-GPTQ"
+# MODEL_BASENAME = "WizardLM-30B-Uncensored-GPTQ-4bit.act-order.safetensors" 
 
 ##### 8-10GB VRAM Graphics Cards (RTX 3080 - RTX 3080 Ti - RTX 3070 Ti - 3060 Ti - RTX 2000 Series, Quadro RTX 4000, 5000, 6000) #####
 ### (*** Requires using intfloat/e5-small-v2 instead of hkunlp/instructor-large as embedding model ***)
 
 ### 7b GPTQ Models for 8GB GPUs
-# model_id = "TheBloke/Wizard-Vicuna-7B-Uncensored-GPTQ"
-# model_basename = "Wizard-Vicuna-7B-Uncensored-GPTQ-4bit-128g.no-act.order.safetensors"
-# model_id = "TheBloke/WizardLM-7B-uncensored-GPTQ"
-# model_basename = "WizardLM-7B-uncensored-GPTQ-4bit-128g.compat.no-act-order.safetensors"
-# model_id = "TheBloke/wizardLM-7B-GPTQ"
-# model_basename = "wizardLM-7B-GPTQ-4bit.compat.no-act-order.safetensors"
+# MODEL_ID = "TheBloke/Wizard-Vicuna-7B-Uncensored-GPTQ"
+# MODEL_BASENAME = "Wizard-Vicuna-7B-Uncensored-GPTQ-4bit-128g.no-act.order.safetensors"
+# MODEL_ID = "TheBloke/WizardLM-7B-uncensored-GPTQ"
+# MODEL_BASENAME = "WizardLM-7B-uncensored-GPTQ-4bit-128g.compat.no-act-order.safetensors"
+# MODEL_ID = "TheBloke/wizardLM-7B-GPTQ"
+# MODEL_BASENAME = "wizardLM-7B-GPTQ-4bit.compat.no-act-order.safetensors"
 
 ####
 #### (FOR GGML) (Quantized cpu+gpu+mps) models - check if they support llama.cpp
