@@ -38,13 +38,13 @@ DOCUMENT_MAP = {
 }
 
 # Default Instructor Model
-EMBEDDING_MODEL_NAME = "hkunlp/instructor-large" # Uses 1.5 GB of VRAM (High Accuracy with lower VRAM usage)
+# EMBEDDING_MODEL_NAME = "hkunlp/instructor-large" # Uses 1.5 GB of VRAM (High Accuracy with lower VRAM usage)
 
 ####
 #### OTHER EMBEDDING MODEL OPTIONS
 ####
 
-# EMBEDDING_MODEL_NAME = "hkunlp/instructor-xl" # Uses 5 GB of VRAM (Most Accurate of all models)
+EMBEDDING_MODEL_NAME = "hkunlp/instructor-xl" # Uses 5 GB of VRAM (Most Accurate of all models)
 # EMBEDDING_MODEL_NAME = "intfloat/e5-large-v2" # Uses 1.5 GB of VRAM (A little less accurate than instructor-large)
 # EMBEDDING_MODEL_NAME = "intfloat/e5-base-v2" # Uses 0.5 GB of VRAM (A good model for lower VRAM GPUs)
 # EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2" # Uses 0.2 GB of VRAM (Less accurate but fastest - only requires 150mb of vram)
@@ -70,8 +70,8 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-large" # Uses 1.5 GB of VRAM (High Acc
 ####    32b        130 GB       65 GB       32.5 GB - 35 GB    16.25 GB - 19 GB  
 ####    65b        260.8 GB     130.4 GB    65.2 GB - 67 GB    32.6 GB -  - 35 GB  
 
-MODEL_ID = "TheBloke/Llama-2-7B-Chat-GGML"
-MODEL_BASENAME = "llama-2-7b-chat.ggmlv3.q4_0.bin"
+# MODEL_ID = "TheBloke/Llama-2-7B-Chat-GGML"
+# MODEL_BASENAME = "llama-2-7b-chat.ggmlv3.q4_0.bin"
 
 ####
 #### (FOR HF MODELS)
@@ -104,10 +104,10 @@ MODEL_BASENAME = "llama-2-7b-chat.ggmlv3.q4_0.bin"
 ##### 24GB VRAM Graphics Cards (RTX 3090 - RTX 4090 (35% Faster) - RTX A5000 - RTX A5500) #####
 
 ### 13b GPTQ Models for 24GB GPUs (*** With best embedding model: hkunlp/instructor-xl ***)
-# model_id = "TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ"
+ model_id = "TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ"
 # model_basename = "Wizard-Vicuna-13B-Uncensored-GPTQ-4bit-128g.compat.no-act-order.safetensors"
 # model_id = "TheBloke/vicuna-13B-v1.5-GPTQ"
-# model_basename = "model.safetensors"
+ model_basename = "model.safetensors"
 # model_id = "TheBloke/Nous-Hermes-13B-GPTQ"
 # model_basename = "nous-hermes-13b-GPTQ-4bit-128g.no-act.order"
 # model_id = "TheBloke/WizardLM-13B-V1.2-GPTQ" 
