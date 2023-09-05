@@ -116,7 +116,7 @@ def load_model(device_type, model_id, model_basename=None):
         "text-generation",
         model=model,
         tokenizer=tokenizer,
-        max_length=2048,
+        max_length=3256,
         temperature=0,
         top_p=0.95,
         repetition_penalty=1.15,
