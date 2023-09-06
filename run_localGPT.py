@@ -202,8 +202,8 @@ def main(device_type, show_sources):
     Question: {question}
     Helpful Answer:"""
 
-    prompt = PromptTemplate(input_variables=["history", "context", "question"], template=template)
-    memory = ConversationBufferMemory(input_key="question", memory_key="history")
+    prompt = PromptTemplate(input_variables=["context", "question"], template=template)
+    memory = ConversationBufferMemory(input_key="question")
 
     llm = load_model(device_type, model_id=MODEL_ID, model_basename=MODEL_BASENAME)
 
