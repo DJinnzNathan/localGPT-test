@@ -199,7 +199,6 @@ def main(device_type, show_sources):
 
     {context}
 
-    {history}
     Question: {question}
     Helpful Answer:"""
 
