@@ -121,7 +121,7 @@ def main(device_type):
     logging.info(f"Loading documents from {SOURCE_DIRECTORY}")
     documents = load_documents(SOURCE_DIRECTORY)
     text_documents, python_documents = split_documents(documents)
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1900, chunk_overlap=150)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=200, chunk_overlap=150)
     python_splitter = RecursiveCharacterTextSplitter.from_language(
         language=Language.PYTHON, chunk_size=880, chunk_overlap=200
     )
