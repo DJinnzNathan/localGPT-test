@@ -107,11 +107,11 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-large"  # Uses 1.5 GB of VRAM (High Ac
 # MODEL_ID = "TheBloke/Mistral-7B-v0.1-GGUF"
 # MODEL_BASENAME = "mistral-7b-v0.1.Q4_K_M.gguf"
 
-# MODEL_ID = "TheBloke/Mistral-7B-Instruct-v0.1-GGUF"
-# MODEL_BASENAME = "mistral-7b-instruct-v0.1.Q8_0.gguf"
+MODEL_ID = "TheBloke/Mistral-7B-Instruct-v0.1-GGUF"
+MODEL_BASENAME = "mistral-7b-instruct-v0.1.Q8_0.gguf"
 
-MODEL_ID = "TheBloke/em_german_13b_v01-GGUF"
-MODEL_BASENAME = "em_german_13b_v01.Q5_K_M.gguf"
+# MODEL_ID = "TheBloke/em_german_13b_v01-GGUF"
+# MODEL_BASENAME = "em_german_13b_v01.Q5_K_M.gguf"
 
 ####
 #### (FOR HF MODELS)
