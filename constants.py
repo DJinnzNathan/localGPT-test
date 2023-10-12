@@ -107,8 +107,8 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-large"  # Uses 1.5 GB of VRAM (High Ac
 # MODEL_ID = "TheBloke/Mistral-7B-v0.1-GGUF"
 # MODEL_BASENAME = "mistral-7b-v0.1.Q4_K_M.gguf"
 
-MODEL_ID = "TheBloke/Mistral-7B-Instruct-v0.1-GGUF"
-MODEL_BASENAME = "mistral-7b-instruct-v0.1.Q8_0.gguf"
+# MODEL_ID = "TheBloke/Mistral-7B-Instruct-v0.1-GGUF"
+# MODEL_BASENAME = "mistral-7b-instruct-v0.1.Q8_0.gguf"
 
 # MODEL_ID = "TheBloke/em_german_13b_v01-GGUF"
 # MODEL_BASENAME = "em_german_13b_v01.Q5_K_M.gguf"
@@ -146,10 +146,10 @@ MODEL_BASENAME = "mistral-7b-instruct-v0.1.Q8_0.gguf"
 ##### 24GB VRAM Graphics Cards (RTX 3090 - RTX 4090 (35% Faster) - RTX A5000 - RTX A5500) #####
 
 ### 13b GPTQ Models for 24GB GPUs (*** With best embedding model: hkunlp/instructor-xl ***)
-# MODEL_ID = "TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ"
+MODEL_ID = "TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ"
 # MODEL_BASENAME = "Wizard-Vicuna-13B-Uncensored-GPTQ-4bit-128g.compat.no-act-order.safetensors"
 # MODEL_ID = "TheBloke/vicuna-13B-v1.5-GPTQ"
-# MODEL_BASENAME = "model.safetensors"
+MODEL_BASENAME = "model.safetensors"
 # MODEL_ID = "TheBloke/Nous-Hermes-13B-GPTQ"
 # MODEL_BASENAME = "nous-hermes-13b-GPTQ-4bit-128g.no-act.order"
 # MODEL_ID = "TheBloke/WizardLM-13B-V1.2-GPTQ"
