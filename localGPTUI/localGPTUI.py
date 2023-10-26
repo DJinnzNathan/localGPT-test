@@ -28,7 +28,7 @@ def home_page():
             print(response.status_code)  # print HTTP response status code for debugging
             if response.status_code == 200:
                 # print(response.json())  # Print the JSON data from the response
-                return render_template("home.html", show_response_modal=True, response_dict=response.json())
+                return render_template("home_md.html", show_response_modal=True, response_dict=response.json())
         elif "documents" in request.files:
             delete_source_url = f"{API_HOST}/delete_source"  # URL of the /api/delete_source endpoint
             if request.form.get("action") == "reset":
