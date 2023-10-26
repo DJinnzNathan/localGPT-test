@@ -51,7 +51,7 @@ def home_page():
 
     # Display the form for GET request
     return render_template(
-        "home.html",
+        "home_md.html",
         show_response_modal=False,
         response_dict={"Prompt": "None", "Answer": "None", "Sources": [("ewf", "wef")]},
     )
