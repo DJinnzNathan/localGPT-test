@@ -25,14 +25,14 @@ def get_prompt_template(system_prompt=system_prompt_de, promptTemplate_type=None
         if history:
             instruction = """
             Kontext: {history} \n {context}
-            Benutzer: {question}"""
+            User: {question}"""
 
             prompt_template = B_INST + SYSTEM_PROMPT + instruction + E_INST
             prompt = PromptTemplate(input_variables=["history", "context", "question"], template=prompt_template)
         else:
             instruction = """
             Kontext: {context}
-            Benutzer: {question}"""
+            User: {question}"""
 
             prompt_template = B_INST + SYSTEM_PROMPT + instruction + E_INST
             prompt = PromptTemplate(input_variables=["context", "question"], template=prompt_template)
