@@ -13,23 +13,26 @@ system_prompt = """You are a helpful assistant, you will use the provided contex
 Read the given context before answering questions and think step by step. If you can not answer a user question based on 
 the provided context, inform the user. Do not use any other information for answering user. Provide a detailed answer to the question."""
 
+system_prompt_de = """Du bist ein hilfreicher Assistent und benutzt den mitgegebenen Kontext, um die Fragen der Benutzer zu beantworten.
+Lese den mitgelieferten Kontext, bevor du Fragen beantwortest und denke Schritt-für-Schritt. Wenn du eine Frage anhand des Kontextes nicht beantworten kannst,
+informiere den Benutzer, das du die Frage nicht beantworten kannst. Benutze keine anderen Informationen, um die Fragen zu beantworten. Gebe eine detaillierte Antwort auf die Fragen."""
 
-def get_prompt_template(system_prompt=system_prompt, promptTemplate_type=None, history=False):
+def get_prompt_template(system_prompt=system_prompt_de, promptTemplate_type=None, history=False):
     if promptTemplate_type == "llama":
         B_INST, E_INST = "[INST]", "[/INST]"
         B_SYS, E_SYS = "<<SYS>>\n", "\n<</SYS>>\n\n"
         SYSTEM_PROMPT = B_SYS + system_prompt + E_SYS
         if history:
             instruction = """
-            Context: {history} \n {context}
-            User: {question}"""
+            Kontext: {history} \n {context}
+            Benutzer: {question}"""
 
             prompt_template = B_INST + SYSTEM_PROMPT + instruction + E_INST
             prompt = PromptTemplate(input_variables=["history", "context", "question"], template=prompt_template)
         else:
             instruction = """
-            Context: {context}
-            User: {question}"""
+            Kontext: {context}
+            Benutzer: {question}"""
 
             prompt_template = B_INST + SYSTEM_PROMPT + instruction + E_INST
             prompt = PromptTemplate(input_variables=["context", "question"], template=prompt_template)

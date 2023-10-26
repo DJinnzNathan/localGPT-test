@@ -155,9 +155,9 @@ MODEL_BASENAME = "model.safetensors"
 # MODEL_ID = "TheBloke/WizardLM-13B-V1.2-GPTQ"
 # MODEL_BASENAME = "gptq_model-4bit-128g.safetensors"
 # MODEL_ID = "TheBloke/em_german_13b_v01-GPTQ"
-MODEL_ID = "TheBloke/em_german_mistral_v01-GPTQ"
+# MODEL_ID = "TheBloke/em_german_mistral_v01-GPTQ"
 # MODEL_ID = "TheBloke/Vicuna-13B-v1.3-German-GPTQ"
-# MODEL_ID = "jphme/em_german_7b_v01_gptq"
+MODEL_ID = "jphme/em_german_7b_v01_gptq"
 # MODEL_ID = "jphme/em_german_7b_leo_gptq"
 
 ### 30b GPTQ Models for 24GB GPUs (*** Requires using intfloat/e5-base-v2 instead of hkunlp/instructor-large as embedding model ***)
